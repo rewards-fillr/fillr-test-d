@@ -1,5 +1,5 @@
 # Rakuten Melbourne Engineer Code Test D
-* Your main objective is to extract an Order and its details from the provided HTML `walmart_order.html`.
+* Your main objective is to extract an Order and its details from each HTML file in the `./orders` folder.
 * The extracted data should match the structure and data of the Order object defined in `test.js`.
 * Edit `extract_order.js` to implement your solution.
 * Using an AI coding assistant is required for this exercise. See "Using AI tools" below.
