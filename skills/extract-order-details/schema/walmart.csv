@@ -1,0 +1,12 @@
+Field,Alias,Value Type,Description,Regular Expression
+Order Number,"Order ID, Order #, Reference ID, order_id",string,"Unique order identifier, e.g. ""200012623519520"". Source: tracking iframe order_id parameter.",^\d+$
+Products,"Items, Line Items, Order Items",array<Product>,One entry per purchased line item (4 items in the fixture). Source: image alt names + iframe item_prices/item_quantities.,^\[.*\]$
+Shipping,"Shipping Cost, Shipping Fee, Delivery Fee",string,"Shipping charge as a string; ""0"" when free.",^\d+(\.\d{2})?$
+Subtotal,"Sub Total, Items Subtotal, subtotal",string,"Sum of all line totals, 2-decimal money, e.g. ""36.05"". Source: iframe subtotal parameter.",^\d+\.\d{2}$
+Grand Total,"Order Total, Total, Total Charged, cart_total",string,"Total charged incl. tax/shipping, 2-decimal money, e.g. ""39.25"". Source: iframe cart_total parameter.",^\d+\.\d{2}$
+Tax,"Sales Tax, Tax Amount, Estimated Tax",string,"Tax amount, 2-decimal money; ""0"" when zero, e.g. ""3.20"". Derived: Grand Total - Subtotal - Shipping.",^(\d+\.\d{2}|0)$
+Payment Type,"Payment Method, Card Type, Tender Type",string|null,"Card network name from the wallet logo alt, e.g. ""Visa"".",^(Visa|Mastercard|Amex|Discover|PayPal|Store Card|null)$
+Products[].Product Name,"Item Name, Product Title, Title",string,"Human-readable product title, e.g. ""Colgate Max Fresh Knockout Whitening Toothpaste, Mint Fusion, 6.3 oz, 3 Pack"".",^.+$
+Products[].Unit Price,"Price, Item Price, item_prices",string,"Price per unit, 2-decimal money, e.g. ""7.96"".",^\d+\.\d{2}$
+Products[].Quantity,"Qty, Count, item_quantities",string,"Number of units as a string, e.g. ""1"".",^\d+$
+Products[].Line Total,"Item Total, Extended Price, Line Subtotal",string,"Unit Price × Quantity, 2-decimal money, e.g. ""7.96"".",^\d+\.\d{2}$
