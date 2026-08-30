@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BrightMart &mdash; Order Confirmation</title>
+  <link rel="canonical" href="https://www.brightmart.com/account/orders/100244871" />
+  <style>
+    body { font-family: "Helvetica Neue", Arial, sans-serif; color: #1b1b1b; margin: 0; background: #f4f5f7; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; }
+    .site-header { background: #0a5f3c; padding: 14px 16px; }
+    .site-header img { height: 26px; vertical-align: middle; }
+    .card { background: #fff; border: 1px solid #e3e5e9; border-radius: 8px; padding: 20px 22px; margin-top: 16px; }
+    h1 { font-size: 22px; margin: 18px 0 4px; }
+    .muted { color: #6b7076; font-size: 13px; }
+    .order-ref { font-size: 14px; margin-top: 6px; }
+    .order-ref strong { font-size: 15px; }
+    .line-item { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #eef0f2; }
+    .line-item:last-child { border-bottom: 0; }
+    .line-item img { width: 64px; height: 64px; object-fit: cover; border-radius: 6px; background: #eee; }
+    .item-name { font-size: 14px; line-height: 1.4; }
+    .item-sku { color: #9198a1; font-size: 12px; margin-top: 4px; }
+    .summary { margin-top: 8px; }
+    .summary-row { display: flex; justify-content: space-between; padding: 6px 0; font-size: 14px; }
+    .summary-row.total { border-top: 1px solid #e3e5e9; margin-top: 6px; padding-top: 12px; font-weight: 700; font-size: 16px; }
+    .pay-line { font-size: 14px; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="site-header">
+    <img src="https://assets.brightmart.com/static/logo-white.svg" alt="BrightMart" />
+  </div>
+
+  <div class="wrap">
+    <h1>Thanks for your order!</h1>
+    <p class="muted">A confirmation has been sent to your email. You can track this order any time from your BrightMart account.</p>
+
+    <div class="card">
+      <div class="order-ref">
+        Order Confirmation&nbsp;<strong>#BRM-100244871</strong>
+      </div>
+      <div class="muted">Placed August 29, 2026 &bull; Ships from BrightMart Fulfillment, Columbus OH</div>
+    </div>
+
+    <div class="card">
+      <h2 style="font-size:16px;margin:0 0 6px;">Items in this order</h2>
+
+      <div class="line-item">
+        <img src="https://assets.brightmart.com/i/BM1001.jpg" alt="BrightMart Basics 6-Pack LED Bulbs, Soft White, 60W Equivalent" />
+        <div>
+          <div class="item-name">BrightMart Basics 6-Pack LED Bulbs, Soft White, 60W Equivalent</div>
+          <div class="item-sku">Item BM1001</div>
+        </div>
+      </div>
+
+      <div class="line-item">
+        <img src="https://assets.brightmart.com/i/BM1002.jpg" alt="Signature Kitchen 12-Piece Nonstick Cookware Set, Slate Grey" />
+        <div>
+          <div class="item-name">Signature Kitchen 12-Piece Nonstick Cookware Set, Slate Grey</div>
+          <div class="item-sku">Item BM1002</div>
+        </div>
+      </div>
+
+      <div class="line-item">
+        <img src="https://assets.brightmart.com/i/BM1003.jpg" alt="Everyday Cotton Bath Towel, Charcoal, 27 x 52 in" />
+        <div>
+          <div class="item-name">Everyday Cotton Bath Towel, Charcoal, 27 x 52 in</div>
+          <div class="item-sku">Item BM1003</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card summary">
+      <h2 style="font-size:16px;margin:0 0 6px;">Order summary</h2>
+      <div class="summary-row"><span>Subtotal</span><span>$119.99</span></div>
+      <div class="summary-row"><span>Shipping &amp; handling</span><span>$5.99</span></div>
+      <div class="summary-row"><span>Estimated tax</span><span>$9.60</span></div>
+      <div class="summary-row total"><span>Order total</span><span>$135.58</span></div>
+    </div>
+
+    <div class="card">
+      <h2 style="font-size:16px;margin:0 0 6px;">Payment</h2>
+      <div class="pay-line">Mastercard ending in 7781</div>
+      <div class="pay-line muted">Billed to Jordan Lee, 44 Cedar Hollow Rd, Columbus OH 43004</div>
+    </div>
+
+    <p class="muted">Questions about your order? Visit <a href="https://www.brightmart.com/help">brightmart.com/help</a>.</p>
+  </div>
+
+  <!-- Conversion pixel. Per-item prices, quantities, the order number (no prefix) and
+       the money breakdown are only carried here, not in the visible DOM. -->
+  <iframe
+    title="BrightMart conversion pixel"
+    width="1" height="1" style="display:none;border:0"
+    src="https://px.brightmart-analytics.com/conv?ev=purchase&order=100244871&items=BM1001:12.49:1,BM1002:84.00:1,BM1003:6.25:4&sub=119.99&ship=5.99&tax=9.60&total=135.58&pay=mastercard"
+  ></iframe>
+</body>
+</html>
